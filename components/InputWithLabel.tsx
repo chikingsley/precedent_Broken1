@@ -11,9 +11,7 @@ const InputWithLabel: React.FC<InputWithLabelProps> = ({ label }) => {
       <input 
         id="inputField" 
         type="text" 
-        className={`py-2 px-4 border ${isFocused ? 'animate-glow border-white' : 'border-gray-300'} hover:border-blue-500 transition-colors duration-200 ease-in-out focus:outline-none`} 
-        onFocus={handleFocus} 
-        onBlur={handleBlur}
+        className="py-2 px-4 border border-gray-300 hover:border-blue-500 transition-colors duration-200 ease-in-out animate-glow focus:outline-none" 
       />
     </div>
   );
