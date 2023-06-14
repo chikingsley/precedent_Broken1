@@ -2,6 +2,7 @@ import Balancer from "react-wrap-balancer";
 import { DEPLOY_URL } from "@/lib/constants";
 import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
+import InputWithLabel from '../components/InputWithLabel';
 
 export default async function Home() {
   const { stargazers_count: stars } = await fetch(
@@ -89,6 +90,7 @@ export default async function Home() {
       </div>
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
       </div>
+      <InputWithLabel label="My Label" />
     </>
   );
 }

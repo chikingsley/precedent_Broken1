@@ -13,6 +13,17 @@ module.exports = {
         default: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       animation: {
+        // ... existing animations ...
+        'glow': 'glow 2s ease-in-out infinite', // new animation
+      },
+      keyframes: {
+        // ... existing keyframes ...
+        'glow': { // new keyframes
+          '0%': { boxShadow: '0 0 5px #9acd32', color: '#000' },
+          '50%': { boxShadow: '0 0 20px #9acd32, 0 0 30px #9acd32', color: '#9acd32' },
+          '100%': { boxShadow: '0 0 5px #9acd32', color: '#000' },
+        },
+      animation: {
         // Fade up and down
         "fade-up": "fade-up 0.5s",
         "fade-down": "fade-down 0.5s",
@@ -68,4 +79,5 @@ module.exports = {
       addVariant("radix-side-bottom", '&[data-side="bottom"]');
     }),
   ],
+},
 };
